@@ -1,31 +1,15 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
-
+name: deploy
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: [ master ]
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Deploy
-      - run: | 
-         echo "==> Prepare to deploy"
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: vuepress-deploy
+    - run: |
+        echo "==> Prepare to deploy"
