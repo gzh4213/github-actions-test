@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Connect to PostgreSQL
-        run: pwd && ls -l
+        run: cd ../ && pwd && ls -l
         env:
           POSTGRES_HOST: postgres
           POSTGRES_PORT: 5432
